@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace CarDealership.Models
 {
   
@@ -8,7 +10,7 @@ public class Car
     private int _price;
     private int _miles;
 
-    private static List<Item> _instances = new List<Item> {};
+    private static List<Car> _instances = new List<Car> {};
 
     // Getters
     public string GetMakeModel ()
@@ -25,7 +27,7 @@ public class Car
     }
 
     // Car constructor
-    Public Car (string makeModel, int price, int miles)
+    public Car(string makeModel, int price, int miles)
     {
       _makeModel = makeModel;
       _price = price;
