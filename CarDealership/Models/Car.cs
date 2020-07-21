@@ -8,6 +8,8 @@ public class Car
     private int _price;
     private int _miles;
 
+    private static List<Item> _instances = new List<Item> {};
+
     // Getters
     public string GetMakeModel ()
     {
@@ -28,7 +30,14 @@ public class Car
       _makeModel = makeModel;
       _price = price;
       _miles = miles;
+
+      _instances.Add(this);
       
+    }
+
+    public static List<Car> GetAll ()
+    {
+      return _instances;
     }
   }
 }
